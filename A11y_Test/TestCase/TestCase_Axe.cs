@@ -27,12 +27,11 @@ namespace A11y_Test.TestCase
             PO_Basic po_basic = new PO_Basic(Driver);
             po_basic.GoToHomePage();
             po_basic.Login("test1@testingyes.com", "test12345");
+            //Accessibility Analysis and Generate Report.
+            string GetDestFolder = "C:/Users/decheverria/OneDrive/Documents/Axe/ReportSelenium";
+            po_basic.AccessibilityTest(GetDestFolder, "AXEHomePage");
 
-
-            //C#
             po_basic.LogOut();
-
-
 
         }
 

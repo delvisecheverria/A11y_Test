@@ -1,9 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
-
-
-
+using Selenium.Axe;
+using System.IO;
 
 namespace A11y_Test.PageObject
 {
@@ -96,6 +95,14 @@ namespace A11y_Test.PageObject
             }
 
         }
+
+        public void AccessibilityTest(string GetDestFolder, string name)
+        {
+            AxeResult results = new AxeBuilder(Driver).Analyze();
+            string path = Path.Combine(GetDestFolder, name + ".html");
+            Driver.CreateAxeHtmlReport(results, path);
+        }
+
 
 
 
