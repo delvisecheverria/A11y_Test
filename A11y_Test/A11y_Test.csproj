@@ -70,7 +70,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\TestCase_Axe.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Report_Sample\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
