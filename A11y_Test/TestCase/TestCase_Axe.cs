@@ -27,7 +27,11 @@ namespace A11y_Test.TestCase
             PO_Basic po_basic = new PO_Basic(Driver);
             po_basic.GoToHomePage();
             po_basic.Login("test1@testingyes.com", "test12345");
+
+
+            //C#
             po_basic.LogOut();
+
 
 
         }
