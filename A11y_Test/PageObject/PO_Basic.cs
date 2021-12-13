@@ -11,8 +11,8 @@ namespace A11y_Test.PageObject
     {
 
         protected IWebDriver Driver;
-
-        //Locators
+        //locators
+        #region Page Locators
         private IWebElement LoginLink => Driver.FindElement(By.XPath("//a[contains(text(),'Log In')]"));
         protected IWebElement Email => Driver.FindElement(By.XPath("//input[@id='login-email-address']"));
         protected IWebElement Password => Driver.FindElement(By.Id("login-password"));
@@ -21,18 +21,7 @@ namespace A11y_Test.PageObject
         protected IWebElement SigOut_btn => Driver.FindElement(By.XPath("//a[text()='Log Out']"));
         protected IWebElement SigOut_text => Driver.FindElement(By.XPath("//h1[@id='logoffDefaultHeading']"));
 
-        protected IWebElement Clothing_cat => Driver.FindElement(By.XPath("//a[@class='category-top'][1]"));
-        protected IWebElement Field_dresses => Driver.FindElement(By.XPath("//input[@name='products_id[2]']"));
-        protected IWebElement AddToCart_btn => Driver.FindElement(By.XPath("//input[@id='submit1']"));
-        protected IWebElement Quantity => Driver.FindElement(By.XPath("//input[@name='cart_quantity[]']"));
-        protected IWebElement Cart_element => Driver.FindElement(By.XPath("//span[@class='cartProdTitle']"));
-        protected IWebElement Delete_element => Driver.FindElement(By.XPath("//*[@id='cartContentsDisplay']/tbody/tr[2]/td[6]/a/img"));
-
-        protected IWebElement Field_search => Driver.FindElement(By.XPath("(//input[@name='keyword'])[last()]"));
-        protected IWebElement Search_btn => Driver.FindElement(By.XPath("(//input[@class='cssButton submit_button button  button_search'])[last()]"));
-        protected By Search_result1 = By.XPath("(//a[contains(text(),'Short')])[last()-1]");
-        protected IWebElement Search_result => Driver.FindElement(By.XPath("(//a[contains(text(),'Short')])[last()-1]"));
-
+        #endregion
 
         public PO_Basic(IWebDriver driver)
         {
